@@ -18,8 +18,8 @@
 		</nav>
 		<h2>All Products</h2>
 		<ul>
-		<c:forEach items="${ products }" var="prod">
-			<li><a href="/${ prod.id }">${ prod.name }</a></li>		
+		<c:forEach items="${products}" var="prod">
+			<li><a href="/products/${ prod.id }">${ prod.name }</a></li>
 		</c:forEach>
 		</ul>
 		<h4> <a href="/products/newproduct">Add Product</a></h4>
