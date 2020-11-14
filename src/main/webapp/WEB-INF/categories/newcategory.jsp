@@ -7,6 +7,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+	<style>
+		.error {color:red}
+	</style>
 <title>Create a Category</title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
 	rel="stylesheet" 
@@ -15,17 +18,16 @@
 
 </head>
 <body>
-<form:form method="POST" action="/categories/createcategory" modelAttribute="newcategory">
-	<div class="form form-group">
-	<form:label path="name">Category Name:
-	<form:errors path="name"/>
-	<form:input path="name"/></form:label>
-	</div>
-	
 
-	<input type="submit" value="Create Category"/>
-	
-</form:form>
-
+<div class="container">
+	<h2>Add Category </h2>
+		<form:form style="width:300px" role="form" method="POST" action="/categories/createcategory" modelAttribute="newcategory">
+			<div class="form form-group">
+				<form:label path="name">Category Name: </form:label>
+				<form:input class="form-control" path="name"/><form:errors path="name" cssClass="error"/>
+			</div>
+				<input type="submit" value="Create Category"/>
+		</form:form>
+</div>
 </body>
 </html>

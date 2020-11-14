@@ -14,13 +14,14 @@
 <body>
 	<div class="container">
 		<nav>
-			<h3>Categories</h3>
+			<h3> <a href="/">Products</a>  | Categories  </h3>
 		</nav>
 		<h2>Choose a Category</h2>
 		<ul>
 		<c:forEach items="${ categories }" var="cat">
-			<li><a href="/${ cat.id }">${ cat.name }</a></li>		
+			<li><a href="/categories/${ cat.id }">${ cat.name }</a></li>
 		</c:forEach>
 		</ul>
+	</div>
 </body>
 </html>
